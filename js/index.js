@@ -38,8 +38,8 @@ function zoom(event) {
     funImg.style.transform = `scale(${scale})`;
 }
 
-// funImg.addEventListener('wheel', zoom);
-// not preventing default... come back to this later.
+funImg.addEventListener('wheel', zoom);
+// not completely preventing default...
 
 // Select
 function logSelection(event) {
@@ -50,3 +50,9 @@ function logSelection(event) {
   
   const input = document.querySelector('input');
   input.addEventListener('select', logSelection);
+
+  // dblclick
+  const busImg = document.querySelector('.intro img');
+  busImg.addEventListener('dblclick', () => {
+      busImg.src="https://images.unsplash.com/photo-1558980394-a3099ed53abb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9"
+  })
