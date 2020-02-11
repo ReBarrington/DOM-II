@@ -63,6 +63,12 @@
         })
     })
 
+// mouse down
+    box1 = document.querySelector('.text-content p');
+    box1.addEventListener('mousedown', () => {
+        box1.style.backgroundColor = "pink"
+    })
+
 // resize
     window.addEventListener("resize", () => {
         const cont = document.querySelector('.container');
@@ -80,13 +86,13 @@
         const nav = document.querySelector('.container nav')
         nav.addEventListener('click', () => {
             nav.style.backgroundColor = "yellow";
-            // event.stopPropagation();
         })
 
         // nav links
         navLink = document.querySelector('.container nav a')
         navLink.addEventListener('click', (event) => {
-            navLink.style.backgroundColor = "white"; 
+            navLink.style.backgroundColor = "white";
+            event.stopPropagation(); 
         })
         
     })
@@ -98,3 +104,5 @@
     stopLink.addEventListener("click", (event) => {
     event.preventDefault();
     })
+
+
