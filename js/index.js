@@ -25,3 +25,28 @@ navLinks.forEach(link => {
         link.style.color = 'black';
     })
 })
+
+// middle image
+// scale the image with your mouse wheel
+const funImg = document.querySelector('.img-content img');
+
+function zoom(event) {
+    event.preventDefault();
+    let scale = 1;
+    scale += event.deltaY * -0.01;
+    // Apply scale transform on next line:
+    funImg.style.transform = `scale(${scale})`;
+}
+
+// funImg.addEventListener('wheel', zoom);
+// not preventing default... come back to this later.
+
+// Select
+function logSelection(event) {
+    const log = document.getElementById('log');
+    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+    log.textContent = `You selected: ${selection}`;
+  }
+  
+  const input = document.querySelector('input');
+  input.addEventListener('select', logSelection);
