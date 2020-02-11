@@ -54,5 +54,26 @@ function logSelection(event) {
   // dblclick
   const busImg = document.querySelector('.intro img');
   busImg.addEventListener('dblclick', () => {
-      busImg.src="https://images.unsplash.com/photo-1558980394-a3099ed53abb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9"
+      busImg.src="https://images.unsplash.com/photo-1558980394-a3099ed53abb?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9";
+
+      busImg.addEventListener('dblclick', () => {
+          busImg.src="https://images.unsplash.com/photo-1531058251365-86cfa8676510?ixlib=rb-1.2.1&auto=format&fit=crop&w=2773&q=80";
+
+          busImg.addEventListener('dblclick', () => {
+              busImg.src= "img/fun-bus.jpg"
+          })
+      })
   })
+
+// resize
+window.addEventListener("resize", () => {
+    const cont = document.querySelector('.container');
+    // container background:
+    cont.style.backgroundColor = 'red';
+    // h1 background
+    document.querySelector('.container h1').style.backgroundColor = 'orange';
+    // nav background
+    document.querySelector('.container nav').style.backgroundColor = "yellow";
+    // nav links
+    document.querySelector('.container nav a').style.backgroundColor = "white";
+})
