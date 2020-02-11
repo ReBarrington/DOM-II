@@ -69,6 +69,12 @@
         box1.style.backgroundColor = "pink"
     })
 
+// mouse up 
+box1 = document.querySelector('.text-content p');
+box1.addEventListener('mouseup', () => {
+    box1.style.backgroundColor = "white"
+})
+
 // resize
     window.addEventListener("resize", () => {
         const cont = document.querySelector('.container');
